@@ -1,6 +1,6 @@
 {
   "name": "asyncraft",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Zero-dependency async control-flow utilities: retry, timeout, circuit breaker, concurrency limit, async map, single-flight memoize, debounce, deferred, and AbortSignal helpers — fully typed, AbortSignal-aware.",
   "keywords": [
     "async",
