@@ -23,20 +23,22 @@ const payload = await retry(
 );
 ```
 
-## 2) Rate-limited queue with bounded concurrency
+## 2) Bounded-concurrency queue
 
 ```ts
-import { asyncMap, createLimit, sleep } from 'asyncraft';
+import { asyncMap, sleep } from 'asyncraft';
 
-const limit = createLimit(4);
-
-await asyncMap(new Array(100).fill(0), async (_item, i) => {
-  return limit(async () => {
+const results = await asyncMap(
+  new Array(100).fill(0),
+  async (_item, i) => {
     await sleep(50);
     return i * i;
-  });
-}, { concurrency: 8 });
+  },
+  { concurrency: 4 },
+);
 ```
+
+`asyncMap` limits concurrent work; it does not enforce a requests-per-second rate. Use a separate scheduler when a downstream service requires a time-based rate limit.
 
 ## 3) Graceful fallback with settled mode
 
@@ -49,7 +51,9 @@ const results = await asyncMap(
     try {
       const value = await Promise.race([
         Promise.resolve().then(() => `ok-${id}`),
-        new Promise<string>((_, reject) => setTimeout(() => reject(new TimeoutError('timeout')), 10)),
+        new Promise<string>((_, reject) =>
+          setTimeout(() => reject(new TimeoutError('timeout')), 10),
+        ),
       ]);
       return value;
     } catch {
