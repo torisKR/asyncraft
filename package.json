@@ -99,7 +99,7 @@
     "publish:release": "npm run publish:check && node ./scripts/publish-release.mjs"
   },
   "devDependencies": {
-    "@eslint/js": "^9.18.0",
+    "@eslint/js": "^10.0.1",
     "@vitest/coverage-v8": "^3.0.0",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.0",
