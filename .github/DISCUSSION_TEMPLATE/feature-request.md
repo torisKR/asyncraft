@@ -1,7 +1,7 @@
 ---
-title: "Feature Discussion"
-labels: ["enhancement", "discussion"]
-about: "Discuss a potential feature or API direction before opening an issue."
+title: 'Feature Discussion'
+labels: ['enhancement', 'discussion']
+about: 'Discuss a potential feature or API direction before opening an issue.'
 ---
 
 ## Problem

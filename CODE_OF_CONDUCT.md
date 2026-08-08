@@ -39,4 +39,3 @@ This policy applies to:
 - Any project communication channels connected to `asyncraft`.
 
 Thanks for helping keep `asyncraft` a safe and constructive place to build software.
-

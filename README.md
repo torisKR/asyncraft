@@ -232,10 +232,10 @@ import { asyncMap, retry, withTimeout } from 'asyncraft';
 const pages = await asyncMap(
   Array.from({ length: 30 }, (_, index) => `https://api.example.com/item/${index}`),
   (url) =>
-    retry(
-      () => withTimeout((signal) => fetch(url, { signal }).then((res) => res.json()), 4000),
-      { retries: 3, minDelay: 150 },
-    ),
+    retry(() => withTimeout((signal) => fetch(url, { signal }).then((res) => res.json()), 4000), {
+      retries: 3,
+      minDelay: 150,
+    }),
   { concurrency: 8, settled: true },
 );
 ```

@@ -1,16 +1,16 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: "/"
+    directory: '/'
     schedule:
       interval: weekly
-      time: "03:00"
+      time: '03:00'
     open-pull-requests-limit: 5
     labels:
-      - "dependencies"
+      - 'dependencies'
   - package-ecosystem: github-actions
-    directory: "/"
+    directory: '/'
     schedule:
       interval: weekly
-      time: "03:00"
+      time: '03:00'
     open-pull-requests-limit: 5

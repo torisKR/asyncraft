@@ -1,8 +1,8 @@
 ---
 name: Bug report
 about: Report a reproducible bug in asyncraft
-title: "[Bug] "
-labels: ["bug"]
+title: '[Bug] '
+labels: ['bug']
 ---
 
 ## Summary
@@ -41,6 +41,7 @@ Please provide a code snippet or test case that reproduces the issue.
 ## Error output / logs
 
 ```text
+
 ```
 
 ## Checklist

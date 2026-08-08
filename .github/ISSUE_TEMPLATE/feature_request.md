@@ -1,8 +1,8 @@
 ---
 name: Feature request
 about: Suggest a new feature or behavior for asyncraft
-title: "[Feature] "
-labels: ["enhancement"]
+title: '[Feature] '
+labels: ['enhancement']
 ---
 
 ## Problem
